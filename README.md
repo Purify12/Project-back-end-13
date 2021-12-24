@@ -3,6 +3,7 @@
 # API SPEC Youthpedia
 
 Api Specification for Youthpedia consist users, webinars, categories, comments and artikels entity.
+Link updated API Documentation : https://documenter.getpostman.com/view/15798551/UVRDHm6X
 
 # USER
 
@@ -79,44 +80,14 @@ json
 }
 ```
 
-## Cek User
+## Cek Users
 
 Request :
 
 - Method : GET
 - Endpoint : `/api/users/user-Profile`
 - Header :
-  - Accept: application/json
-- Query Param :
-  - size : number,
-  - page : number
-```
-
-Response :
-
-```json
-{
-  "code": "number",
-  "status": "string",
-  "data": {
-    "id": "string, unique",
-    "username": "string",
-    "password": "hash(string)",
-    "email": "string",
-    "role": "string",
-    "date": "Date"
-  }
-}
-```
-
-## List Users
-
-Request :
-
-- Method : GET
-- Endpoint : `/api/users`
-- Header :
-  - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -137,6 +108,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -168,7 +140,7 @@ Request :
 - Method : GET
 - Endpoint : `/api/webinar/get`
 - Header :
-  - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -192,6 +164,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -222,7 +195,7 @@ Request :
 - Method : GET
 - Endpoint : `/api/webinar/get/:id`
 - Header :
-  - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -245,6 +218,7 @@ Request :
 - Endpoint : `/api/webinar/delete/:id`
 - Header :
   - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -265,6 +239,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -290,7 +265,7 @@ Request :
 - Method : GET
 - Endpoint : `/api/category/get`
 - Header :
-  - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -311,6 +286,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -339,6 +315,7 @@ Request :
 - Endpoint : `/api/category/:id`
 - Header :
   - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -359,6 +336,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -389,6 +367,7 @@ Request :
 - Endpoint : `/api/comment/get`
 - Header :
   - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -436,6 +415,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -465,6 +445,7 @@ Request :
 - Endpoint : `/api/comment/delete/:id`
 - Header :
   - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -485,6 +466,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -527,6 +509,7 @@ Request :
 - Endpoint : `/api/artikel/get`
 - Header :
   - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
@@ -568,6 +551,7 @@ Request :
 - Header :
   - Content-Type: application/json
   - Accept: application/json
+  - Authorization: Acces Token
 - Body :
 
 ```json
@@ -604,6 +588,7 @@ Request :
 - Endpoint : `/api/artikel/delete/:id`
 - Header :
   - Accept: application/json
+  - Authorization: Acces Token
 
 Response :
 
