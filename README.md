@@ -2,7 +2,7 @@
 
 # API SPEC Youthpedia
 
-Api Specification for Toko Pintar consist Books, Users and Orders entity.
+Api Specification for Youthpedia consist user, webinars, categories, comments and artikels entity.
 
 # USER
 
