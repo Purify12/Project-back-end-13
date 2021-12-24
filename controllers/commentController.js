@@ -1,4 +1,4 @@
-// function get All Products
+// function get All 
 const Comment = require('../models/comment.js')
 exports.getComment = async (req, res) => {
     try {
@@ -11,7 +11,7 @@ exports.getComment = async (req, res) => {
     }   
 }
 
-// function get single Product
+// function get single 
 exports.getCommentById = async (req, res) => {
     try {
         const comment = await (await Comment.findById(req.params.id)).populate([
@@ -24,7 +24,7 @@ exports.getCommentById = async (req, res) => {
     
 }
 
-// function Create Product
+// function Create 
 exports.saveComment = async (req, res) => {
     const comment = new Comment(req.body);
     try {
@@ -35,7 +35,7 @@ exports.saveComment = async (req, res) => {
     }
 }
 
-// function Update Product
+// function Update 
 exports.updatedComment = async (req, res) => {
     const cekId = await Comment.findById(req.params.id);
     if(!cekId) return res.status(404).json({message: "Data tidak ditemukan"}); 

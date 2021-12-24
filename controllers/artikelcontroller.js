@@ -1,4 +1,4 @@
-// function get All Products
+// function get All 
 const Artikel = require('../models/artikel.js')
 exports.getArtikel = async (req, res) => {
     try {
@@ -12,7 +12,7 @@ exports.getArtikel = async (req, res) => {
     }    
 }
 
-// function get single Product
+// function get single 
 exports.getArtikelById = async (req, res) => {
     try {
         const artikels = await Artikel.findById(req.params.id).populate([
@@ -26,7 +26,7 @@ exports.getArtikelById = async (req, res) => {
     
 }
 
-// function Create Product
+// function Create 
 exports.saveArtikel = async (req, res) => {
     const artikels = new Artikel(req.body);
     try {
@@ -37,7 +37,7 @@ exports.saveArtikel = async (req, res) => {
     }
 }
 
-// function Update Product
+// function Update 
 exports.updateArtikel = async (req, res) => {
     const cekId = await Artikel.findById(req.params.id);
     if(!cekId) return res.status(404).json({message: "Data tidak ditemukan"}); 
@@ -49,7 +49,7 @@ exports.updateArtikel = async (req, res) => {
     }
 }
 
-// function Delete Product
+// function Delete 
 exports.deleteArtikel = async (req, res) => {
     const cekId = await Artikel.findById(req.params.id);
     if(!cekId) return res.status(404).json({message: "Data tidak ditemukan"});
