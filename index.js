@@ -58,6 +58,7 @@ app.use("/webinar", require("./routes/webinar"));
 app.use("/artikel", require("./routes/artikel"));
 app.use("/comment", require("./routes/comment"));
 app.use("/category", require("./routes/category"));
+app.use("/home", require("./routes/index"));
 // middleware for error responses
 app.use(errors.errorHandler);
 
