@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-const dbConfig = require("./config/db.config");
-
+const cors = require("cors");
+// const mongoose = require("mongoose");
+const dotenv = require("dotenv")
+dotenv.config()
+const openDBConnection = require("./helpers/db")
 
 const auth = require("./middlewares/auth.js");
 const errors = require("./middlewares/errors.js");
@@ -10,6 +12,12 @@ const unless = require("express-unless");
 
 
 // connect to mongodb
+const port = process.env.PORT || 3000
+const uri = process.env.MONGO_URI || "mongodb+srv://assassincode:assassincode170845@cluster0.abmvz.mongodb.net/db_yia?retryWrites=true&w=majority"
+var corsOptions = {
+  origin: `http://localhost:${port}`
+};
+app.use(cors(corsOptions));
 
 /**
  * With useNewUrlParser: The underlying MongoDB driver has deprecated their current connection string parser. 
@@ -19,21 +27,21 @@ const unless = require("express-unless");
  * With useUnifiedTopology, the MongoDB driver sends a heartbeat every heartbeatFrequencyMS to check on the status of the connection. 
  * A heartbeat is subject to serverSelectionTimeoutMS , so the MongoDB driver will retry failed heartbeats for up to 30 seconds by default.
  */
-mongoose.Promise = global.Promise;
-mongoose
-  .connect(dbConfig.db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(
-    () => {
-      console.log("Database connected");
-    },
-    (error) => {
-      console.log("Database can't be connected: " + error);
-    }
-  );
-
+// mongoose.Promise = global.Promise;
+// mongoose
+//   .connect(dbConfig.db, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(
+//     () => {
+//       console.log("Database connected");
+//     },
+//     (error) => {
+//       console.log("Database can't be connected: " + error);
+//     }
+// );
+openDBConnection(uri)
 
 // middleware for authenticating token submitted with requests
 /**
