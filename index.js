@@ -13,7 +13,7 @@ const unless = require("express-unless");
 
 // connect to mongodb
 const port = process.env.PORT || 3000
-const uri = process.env.MONGO_URI || "mongodb+srv://assassincode:assassincode170845@cluster0.abmvz.mongodb.net/db_yia?retryWrites=true&w=majority"
+const uri = process.env.MONGO_URI || "mongodb+srv://jose:Josepoenya1@cluster0.1ug8h.mongodb.net/projectbackend13?authSource=admin&replicaSet=atlas-14383t-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
 var corsOptions = {
   origin: `http://localhost:${port}`
 };
