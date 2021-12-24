@@ -71,6 +71,6 @@ app.use("/home", require("./routes/index"));
 app.use(errors.errorHandler);
 
 // listen for requests
-app.listen(process.env.port || 3000, function () {
-  console.log("Ready to Go!");
-});
+app.listen(port, () => {
+  console.log("server is listening on port", port)
+})
