@@ -4,6 +4,7 @@
 
 Api Specification for Youthpedia consist users, webinars, categories, comments and artikels entity.
 Link updated API Documentation : https://documenter.getpostman.com/view/15798551/UVRDHm6X
+Link upload Heroku : https://projectbackend13.herokuapp.com/
 
 # USER
 
