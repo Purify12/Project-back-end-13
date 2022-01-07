@@ -25,9 +25,9 @@ exports.register = (req, res, next) => {
 };
 
 exports.login = (req, res, next) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
-  userServices.login({ username, password }, (error, results) => {
+  userServices.login({ email, password }, (error, results) => {
     if (error) {
       return next(error);
     }
