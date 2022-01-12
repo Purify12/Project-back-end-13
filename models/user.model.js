@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 const uniqueValidator = require("mongoose-unique-validator");
 
 const UserSchema = new Schema({
-  username: {
+  name: {
     type: String,
     required: true,
   },
@@ -30,7 +30,7 @@ const UserSchema = new Schema({
           enum : ['user','admin'],
           default: 'user'
       },
-  country: {
+  pic: {
     type: String,
     required: true,
   }
