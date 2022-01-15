@@ -9,6 +9,7 @@ router.get("/ping", (req, res) => {
     }
 
     res.status(200).send(ready)
+    res.send({ welcome: "Welcome to youthPedia API"})   
 })
 
 
