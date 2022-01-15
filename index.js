@@ -53,6 +53,15 @@ app.use(
     path: [
       { url: "/users/login", methods: ["POST"] },
       { url: "/users/register", methods: ["POST"] },
+      { url: "/artikel/get", methods: ["GET"] },
+      { url: "/artikel/get/:id", methods: ["GET"] },
+      { url: "/webinar/get", methods: ["GET"] },
+      { url: "/webinar/get/:id", methods: ["GET"] },
+      { url: "/comment/get", methods: ["GET"] },
+      { url: "/comment/get/:id", methods: ["GET"] },
+      { url: "/category/get", methods: ["GET"] },
+      { url: "/category/get/:id", methods: ["GET"] },
+      { url: "/", methods: ["GET"] },
     ],
   })
 );
@@ -61,12 +70,11 @@ app.use(express.json());
 
 // initialize routes 
 app.use("/users", require("./routes/users.routes"));
-app.use("/artis", require("./routes/artikel"));
 app.use("/webinar", require("./routes/webinar"));
 app.use("/artikel", require("./routes/artikel"));
 app.use("/comment", require("./routes/comment"));
 app.use("/category", require("./routes/category"));
-app.use("/home", require("./routes/index"));
+app.use("/", require("./routes/index"));
 // middleware for error responses
 app.use(errors.errorHandler);
 
