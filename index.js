@@ -61,7 +61,7 @@ app.use(
       { url: "/comment/get/:id", methods: ["GET"] },
       { url: "/category/get", methods: ["GET"] },
       { url: "/category/get/:id", methods: ["GET"] },
-      { url: "/", methods: ["GET"] },
+      { url: "/home", methods: ["GET"] },
     ],
   })
 );
