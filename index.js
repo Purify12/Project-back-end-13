@@ -15,6 +15,8 @@ const unless = require("express-unless");
 const port = process.env.PORT || 3000
 const uri = process.env.MONGO_URI || "mongodb+srv://jose:Josepoenya1@cluster0.1ug8h.mongodb.net/projectbackend13?authSource=admin&replicaSet=atlas-14383t-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
 var corsOptions = {
+  optionsSuccessStatus: 200, // For legacy browser support
+  credentials: true,
   origin: `http://localhost:${port}`
 };
 app.use(cors(corsOptions));
